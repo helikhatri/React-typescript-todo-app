@@ -20,7 +20,6 @@ interface ICopy {
   uniqueid: number;
   item: string | undefined;
 }
-
 const App = () => {
 
   const [text, setText] = useState<string>();
