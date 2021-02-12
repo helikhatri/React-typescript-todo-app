@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.form-check-input
+{
+  margin-left: -17rem !important;
+}
+.form-check
+{
+  display: contents;
+}

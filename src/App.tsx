@@ -108,18 +108,23 @@ const App = () => {
               <Card.Header>Todo List</Card.Header>
               <ListGroup className="list-group-flush">
                 {list.map((values, index) =>
-                  <ListGroupItem>{values.item}
-                    <div style={{ float: 'right' }}>
-                      <Button variant="outline-primary"
-                        style={{ margin: '2px' }}
-                        value={values.item}
-                        tabIndex={values.uniqueid}
-                        onClick={onEdit}>Edit</Button>
+                  <ListGroupItem>
+                    <Form.Check
+                      type="checkbox"
+                      id="inlineFormCheck"
+                      label={values.item}
+                      className="mb-2 mr-sm-2"
+                    />
+                    <Button variant="outline-primary"
+                      style={{ margin: '2px', float: 'right' }}
+                      value={values.item}
+                      tabIndex={values.uniqueid}
+                      onClick={onEdit}>Edit</Button>
 
-                      <Button variant="outline-danger"
-                        value={index}
-                        onClick={onDelete}>Delete</Button>
-                    </div>
+                    <Button variant="outline-danger"
+                      style={{ float: 'right' }}
+                      value={index}
+                      onClick={onDelete}>Delete</Button>
                   </ListGroupItem>
                 )}
               </ListGroup>
